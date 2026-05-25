@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paytm for Business — Merchant Offer Portal · May 2026</title>
+<meta name="description" content="Download No-Cost EMI offer manuals for May 2026. 37 brands including OnePlus, Samsung, Sony, LG, Voltas and more.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#002970;--sky:#00baf2;--blue:#0052cc;--green:#16a34a;
+  --charcoal:#2d3748;--muted:#64748b;--border:#e2e8f0;
+  --surface:#f7fafc;--white:#ffffff;--bg:#eef2f7;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--charcoal);min-height:100vh;}
+/* NAVBAR */
+.navbar{background:var(--navy);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;}
+.nav-logo-text{font-size:20px;font-weight:800;}.nav-logo-text .t{color:var(--sky);}
+.nav-logo-text span{color:white;}
+.nav-sep{width:1px;height:26px;background:rgba(255,255,255,.2);}
+.nav-sub{font-size:11.5px;color:rgba(255,255,255,.55);font-weight:500;}
+.nav-right{display:flex;align-items:center;gap:12px;}
+.nav-chip{font-size:11px;font-weight:700;color:var(--sky);background:rgba(0,186,242,.12);border:1px solid rgba(0,186,242,.25);border-radius:20px;padding:4px 12px;}
+.nav-month{font-size:12px;color:rgba(255,255,255,.45);font-family:'DM Mono',monospace;}
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#004bb5 55%,#0070d8 100%);padding:50px 40px 66px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(0,186,242,.15) 0%,transparent 60%),radial-gradient(ellipse at 75% 50%,rgba(0,186,242,.1) 0%,transparent 60%);}
+.hero-content{position:relative;z-index:1;}
+.hero-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky);background:rgba(0,186,242,.1);border:1px solid rgba(0,186,242,.25);border-radius:20px;padding:5px 16px;margin-bottom:14px;}
+.hero h1{font-size:38px;font-weight:800;color:white;line-height:1.15;letter-spacing:-.6px;margin-bottom:10px;}
+.hero h1 span{color:var(--sky);}
+.hero-sub{font-size:15px;color:rgba(255,255,255,.6);margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;}
+/* SEARCH */
+.search-wrap{max-width:620px;margin:0 auto;position:relative;}
+.search-icon{position:absolute;left:18px;top:50%;transform:translateY(-55%);font-size:18px;pointer-events:none;display:flex;align-items:center;line-height:1;}
+.search-bar{width:100%;height:54px;line-height:54px;padding:0 52px 0 50px;border-radius:12px;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.97);font-size:15px;font-family:'DM Sans',sans-serif;color:var(--charcoal);outline:none;box-shadow:0 8px 40px rgba(0,0,0,.25);transition:border .2s,box-shadow .2s;}
+.search-bar::placeholder{color:var(--muted);}
+.search-bar:focus{border-color:var(--sky);box-shadow:0 8px 40px rgba(0,0,0,.3),0 0 0 4px rgba(0,186,242,.15);}
+.search-clear{position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;display:none;padding:4px;line-height:1;}
+.search-hint{margin-top:10px;font-size:12px;color:rgba(255,255,255,.45);}
+.search-hint kbd{background:rgba(255,255,255,.1);border-radius:4px;padding:1px 7px;font-family:'DM Mono',monospace;font-size:11px;}
+/* STATS BAR */
+.stats-bar{background:white;border-bottom:1px solid var(--border);padding:12px 40px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
+.stat-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted);}
+.stat-item strong{color:var(--charcoal);font-weight:700;}
+.stat-dot{width:7px;height:7px;border-radius:50%;background:var(--sky);}
+.filter-chips{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;}
+.fc{font-size:11.5px;font-weight:600;padding:5px 14px;border-radius:20px;border:1.5px solid var(--border);background:white;color:var(--muted);cursor:pointer;transition:all .15s;}
+.fc:hover,.fc.active{background:var(--navy);color:white;border-color:var(--navy);}
+/* MAIN */
+.main{max-width:1220px;margin:0 auto;padding:36px 40px;}
+.results-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;}
+.results-title{font-size:19px;font-weight:800;color:var(--navy);}
+.results-count{font-size:12.5px;color:var(--muted);}
+/* BRAND GRID */
+.brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
+/* BRAND CARD */
+.brand-card{background:white;border-radius:14px;border:1.5px solid var(--border);overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column;}
+.brand-card:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(0,0,0,.1);border-color:var(--sky);}
+.card-accent{height:4px;width:100%;}
+.card-header{padding:18px 20px 12px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px;}
+.card-brand-name{font-size:20px;font-weight:800;letter-spacing:-.3px;margin-bottom:3px;}
+.card-brand-cat{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;}
+.card-logo{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.card-chips{display:flex;flex-wrap:wrap;gap:5px;padding:0 20px 12px;}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:600;padding:3px 9px;border-radius:20px;border:1px solid;white-space:nowrap;}
+.chip-month{background:rgba(0,186,242,.08);color:#0077aa;border-color:rgba(0,186,242,.3);}
+.chip-offer{background:rgba(0,82,204,.08);color:var(--blue);border-color:rgba(0,82,204,.25);}
+.chip-bank{background:rgba(0,41,112,.06);color:var(--navy);border-color:rgba(0,41,112,.2);}
+.chip-cat{background:rgba(22,163,74,.08);color:var(--green);border-color:rgba(22,163,74,.25);}
+.card-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:0 20px 16px;border-radius:8px;overflow:hidden;border:1px solid var(--border);}
+.cs{background:var(--surface);padding:10px 12px;}
+.cs-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+.cs-value{font-size:13px;font-weight:800;color:var(--blue);}
+.cs-value.g{color:var(--green);}
+.card-footer{margin-top:auto;padding:14px 20px;border-top:1px solid var(--border);display:flex;gap:8px;}
+.btn-dl{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:10px 16px;border-radius:7px;background:var(--navy);color:white;font-size:12.5px;font-weight:700;border:none;cursor:pointer;text-decoration:none;transition:background .15s,transform .1s;}
+.btn-dl:hover{background:#003a9e;transform:translateY(-1px);}
+.btn-view{padding:10px 14px;border-radius:7px;background:var(--surface);color:var(--charcoal);font-size:12.5px;font-weight:600;border:1.5px solid var(--border);cursor:pointer;text-decoration:none;transition:all .15s;white-space:nowrap;}
+.btn-view:hover{background:white;border-color:var(--sky);color:var(--navy);}
+/* SKU RESULTS */
+.sku-results{display:none;}
+.sku-results.visible{display:block;}
+.brand-grid.hidden{display:none;}
+.sku-wrap{background:white;border-radius:14px;border:1.5px solid var(--border);overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+.sku-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.sku-table thead tr{background:var(--navy);}
+.sku-table thead th{padding:11px 14px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:white;text-align:left;}
+.sku-table tbody tr{border-bottom:1px solid var(--border);transition:background .1s;}
+.sku-table tbody tr:last-child{border-bottom:none;}
+.sku-table tbody tr:hover{background:var(--surface);}
+.sku-table td{padding:11px 14px;vertical-align:middle;}
+.sku-brand{font-weight:700;color:var(--navy);}
+.sku-model{font-size:11.5px;color:var(--charcoal);}
+.sku-code{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--muted);}
+.sku-cb{font-weight:800;color:var(--blue);font-size:13.5px;}
+.sku-chip{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(0,82,204,.08);color:var(--blue);border:1px solid rgba(0,82,204,.2);}
+.sku-btn{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:6px;background:var(--navy);color:white;font-size:11.5px;font-weight:600;border:none;cursor:pointer;text-decoration:none;transition:background .15s;}
+.sku-btn:hover{background:#003a9e;}
+/* NO RESULTS */
+.no-results{text-align:center;padding:70px 40px;display:none;}
+.no-results-icon{font-size:44px;margin-bottom:14px;}
+.no-results h3{font-size:19px;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.no-results p{font-size:13.5px;color:var(--muted);}
+mark{background:rgba(0,186,242,.25);color:inherit;border-radius:2px;padding:0 2px;}
+/* FOOTER */
+.site-footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;padding:24px 40px;font-size:11.5px;margin-top:56px;}
+.site-footer strong{color:white;}
+</style>
+<script src="https://sagarmukherjeeainoob.github.io/paytm-merchant-offers/sku_db.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo">
+    <div class="nav-logo-text"><span>Pay</span><span class="t">t</span><span>m</span></div>
+    <div class="nav-sep"></div>
+    <div class="nav-sub">for Business &nbsp;·&nbsp; Merchant Offer Portal</div>
+  </div>
+  <div class="nav-right">
+    <span class="nav-chip">🏪 37 Brands</span>
+    <span class="nav-month">May 2026</span>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">No-Cost EMI &amp; Cashback Offer Manuals — May 2026</div>
+    <h1>Find Your <span>Brand Manual</span><br>Download Instantly</h1>
+    <p class="hero-sub">Search by brand name, product, or SKU to find the right offer manual for your store.</p>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-bar" id="searchInput" placeholder="Search brand, product name or SKU…" autocomplete="off" spellcheck="false"/>
+      <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
+      <div class="search-hint">Try <kbd>OnePlus</kbd> or <kbd>Sony</kbd> or <kbd>SM-S921</kbd> or <kbd>Samsung</kbd></div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item"><span class="stat-dot"></span><strong>37</strong> Brand Manuals</div>
+  <div class="stat-item"><span class="stat-dot"></span><strong>25,000+</strong> SKUs</div>
+  <div class="stat-item"><span class="stat-dot"></span><strong>May 2026</strong> Active</div>
+  <div class="filter-chips" id="filterChips">
+    <button class="fc active" onclick="filterCards('all',this)">All</button>
+    <button class="fc" onclick="filterCards('mobile',this)">📱 Mobile</button>
+    <button class="fc" onclick="filterCards('ac',this)">❄️ ACs</button>
+    <button class="fc" onclick="filterCards('tv',this)">📺 TV</button>
+    <button class="fc" onclick="filterCards('laptop',this)">💻 Laptop</button>
+    <button class="fc" onclick="filterCards('audio',this)">🎧 Audio</button>
+    <button class="fc" onclick="filterCards('appliance',this)">🏠 Appliances</button>
+  </div>
+</div>
+
+<main class="main">
+  <div class="results-header">
+    <div class="results-title" id="resultsTitle">May 2026 Offer Manuals</div>
+    <div class="results-count" id="resultsCount">Showing all 37 brand manuals</div>
+  </div>
+  <div class="no-results" id="noResults">
+    <div class="no-results-icon">🔍</div>
+    <h3>No matches found</h3>
+    <p>Try a brand name like "Samsung" or "Sony", or a product like "OnePlus 13"</p>
+  </div>
+  <div class="sku-results" id="skuResults">
+    <div class="sku-wrap">
+      <table class="sku-table">
+        <thead><tr>
+          <th>Brand</th><th>Product / SKU</th><th>Category</th>
+          <th>Price Range</th><th>Cashback</th><th>Banks</th><th>Manual</th>
+        </tr></thead>
+        <tbody id="skuTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="brand-grid" id="brandGrid"></div>
+</main>
+
+<footer class="site-footer">
+  <strong>Paytm for Business</strong> — Merchant Offer Portal &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Confidential — For Internal Use Only
+</footer>
+
+<script>
+const BASE = 'https://sagarmukherjeeainoob.github.io/paytm-merchant-offers';
+
+const BRANDS = [
+  {brand:'OnePlus',      file:'OnePlus_May2026_NoCostEMIOffers.html',      emoji:'📱',cat:'Mobiles & IOT',         tags:'mobile',      max_offer:'₹5,000 EMI CB',  banks:'HDFC · YES · IndusInd', color:'#e53e3e'},
+  {brand:'IFB',          file:'IFB_May2026_NoCostEMIOffers.html',           emoji:'🫙',cat:'Washing Machines & ACs',tags:'appliance',   max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#002970'},
+  {brand:'Samsung Mobile',file:'Samsung_Mobile_May2026_NoCostEMIOffers.html',emoji:'📱',cat:'Mobile Phones',       tags:'mobile',      max_offer:'₹5,000',          banks:'HDFC',                  color:'#1428A0'},
+  {brand:'Xiaomi',       file:'Xiaomi_May2026_NoCostEMIOffers.html',        emoji:'📱',cat:'Phones · Tablets · TV', tags:'mobile tv',   max_offer:'NC EMI',          banks:'As per CBD',            color:'#ff6900'},
+  {brand:'OPPO',         file:'OPPO_May2026_NoCostEMIOffers.html',          emoji:'📱',cat:'Mobile Phones',         tags:'mobile',      max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#1F8F6B'},
+  {brand:'HP',           file:'HP_May2026_NoCostEMIOffers.html',            emoji:'💻',cat:'Laptops & Printers',    tags:'laptop',      max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#0096D6'},
+  {brand:'Vijay Sales',  file:'Vijay_Sales_May2026_NoCostEMIOffers.html',   emoji:'🏪',cat:'Own Label Products',    tags:'appliance',   max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#7c3aed'},
+  {brand:'Bose',         file:'Bose_May2026_NoCostEMIOffers.html',          emoji:'🎧',cat:'Audio & Speakers',      tags:'audio',       max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#333333'},
+  {brand:'Amstrad',      file:'Amstrad_May2026_NoCostEMIOffers.html',       emoji:'📺',cat:'Televisions',           tags:'tv',          max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#002970'},
+  {brand:'JBL',          file:'JBL_May2026_NoCostEMIOffers.html',           emoji:'🔊',cat:'Audio & Speakers',      tags:'audio',       max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#e53e3e'},
+  {brand:'Haier',        file:'Haier_May2026_NoCostEMIOffers.html',         emoji:'❄️',cat:'ACs & Appliances',      tags:'ac appliance',max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#003DA5'},
+  {brand:'Vivo',         file:'Vivo_May2026_NoCostEMIOffers.html',          emoji:'📱',cat:'Mobile Phones',         tags:'mobile',      max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#415FFF'},
+  {brand:'Panasonic',    file:'Panasonic_May2026_NoCostEMIOffers.html',     emoji:'📺',cat:'Appliances & TVs',      tags:'tv appliance',max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#003087'},
+  {brand:'Godrej',       file:'Godrej_May2026_NoCostEMIOffers.html',        emoji:'🏠',cat:'Home Appliances',       tags:'appliance',   max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#6B2D90'},
+  {brand:'Tecno',        file:'Tecno_May2026_NoCostEMIOffers.html',         emoji:'📱',cat:'Mobile Phones',         tags:'mobile',      max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#009B77'},
+  {brand:'Itel',         file:'Itel_May2026_NoCostEMIOffers.html',          emoji:'📱',cat:'Mobile Phones',         tags:'mobile',      max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#002970'},
+  {brand:'Whirlpool',    file:'Whirlpool_May2026_NoCostEMIOffers.html',     emoji:'🫙',cat:'Washing Machines & ACs',tags:'ac appliance',max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#003087'},
+  {brand:'Realme',       file:'Realme_May2026_NoCostEMIOffers.html',        emoji:'📱',cat:'Mobile Phones',         tags:'mobile',      max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#d97706'},
+  {brand:'Samsung CE',   file:'Samsung_CE_May2026_NoCostEMIOffers.html',    emoji:'📺',cat:'Consumer Electronics',  tags:'tv appliance',max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#1428A0'},
+  {brand:'Asus',         file:'Asus_May2026_NoCostEMIOffers.html',          emoji:'💻',cat:'Laptops & Tablets',     tags:'laptop',      max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#00539C'},
+  {brand:'Bosch',        file:'Bosch_May2026_NoCostEMIOffers.html',         emoji:'🍳',cat:'Home Appliances',       tags:'appliance',   max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#e53e3e'},
+  {brand:'BlueStar',     file:'BlueStar_May2026_NoCostEMIOffers.html',      emoji:'❄️',cat:'Air Conditioners',      tags:'ac',          max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#0078D4'},
+  {brand:'Havells Lloyd',file:'Havells_Lloyd_May2026_NoCostEMIOffers.html', emoji:'❄️',cat:'ACs & Appliances',      tags:'ac appliance',max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#E32119'},
+  {brand:'Glen',         file:'Glen_May2026_NoCostEMIOffers.html',          emoji:'🍳',cat:'Kitchen Appliances',    tags:'appliance',   max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#002970'},
+  {brand:'Acer',         file:'Acer_May2026_NoCostEMIOffers.html',          emoji:'💻',cat:'Laptops & Tablets',     tags:'laptop',      max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#83B81A'},
+  {brand:'Canon',        file:'Canon_May2026_NoCostEMIOffers.html',         emoji:'📷',cat:'Cameras & Printers',    tags:'appliance',   max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#CC0000'},
+  {brand:'Voltas',       file:'Voltas_May2026_NoCostEMIOffers.html',        emoji:'❄️',cat:'Air Conditioners',      tags:'ac',          max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#e53e3e'},
+  {brand:'Voltas Beko',  file:'Voltas_Beko_May2026_NoCostEMIOffers.html',   emoji:'🫙',cat:'ACs & Appliances',      tags:'ac appliance',max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#d97706'},
+  {brand:'Daikin',       file:'Daikin_May2026_NoCostEMIOffers.html',        emoji:'❄️',cat:'Air Conditioners',      tags:'ac',          max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#009FDB'},
+  {brand:'DishTV',       file:'DishTV_May2026_NoCostEMIOffers.html',        emoji:'📡',cat:'DTH & Television',      tags:'tv',          max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#E8441A'},
+  {brand:'Midea Toshiba',file:'Midea_Toshiba_May2026_NoCostEMIOffers.html', emoji:'❄️',cat:'ACs & Appliances',      tags:'ac appliance',max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#E42313'},
+  {brand:'Carrier',      file:'Carrier_May2026_NoCostEMIOffers.html',       emoji:'❄️',cat:'Air Conditioners',      tags:'ac',          max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#003DA5'},
+  {brand:'Midea',        file:'Midea_May2026_NoCostEMIOffers.html',         emoji:'❄️',cat:'Air Conditioners',      tags:'ac',          max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#E42313'},
+  {brand:'Lenovo',       file:'Lenovo_May2026_NoCostEMIOffers.html',        emoji:'💻',cat:'Laptops & Tablets',     tags:'laptop',      max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#E2231A'},
+  {brand:'Croma',        file:'Croma_May2026_NoCostEMIOffers.html',         emoji:'🏪',cat:'Own Label Products',    tags:'appliance tv',max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#67C6CA'},
+  {brand:'Sony',         file:'Sony_May2026_NoCostEMIOffers.html',          emoji:'📺',cat:'Televisions & Audio',   tags:'tv audio',    max_offer:'₹3,000',          banks:'Multiple Banks',        color:'#333333'},
+  {brand:'LG',           file:'LG_May2026_NoCostEMIOffers.html',            emoji:'📺',cat:'TVs & Appliances',      tags:'tv appliance',max_offer:'As per CBD',      banks:'Multiple Banks',        color:'#A50034'},
+];
+
+const grid = document.getElementById('brandGrid');
+function renderCards(list) {
+  grid.innerHTML = list.map(b => `
+    <div class="brand-card" data-brand="${b.brand.toLowerCase()}" data-tags="${b.tags}">
+      <div class="card-accent" style="background:${b.color};"></div>
+      <div class="card-header">
+        <div>
+          <div class="card-brand-name" style="color:${b.color};">${b.brand}</div>
+          <div class="card-brand-cat">${b.cat}</div>
+        </div>
+        <div class="card-logo" style="background:${b.color}18;">${b.emoji}</div>
+      </div>
+      <div class="card-chips">
+        <span class="chip chip-month">📅 May 2026</span>
+        <span class="chip chip-offer">💰 ${b.max_offer}</span>
+        <span class="chip chip-bank">🏦 ${b.banks}</span>
+      </div>
+      <div class="card-stats">
+        <div class="cs"><div class="cs-label">Max Offer</div><div class="cs-value">${b.max_offer}</div></div>
+        <div class="cs"><div class="cs-label">Instruments</div><div class="cs-value g">CC &amp; DC</div></div>
+        <div class="cs"><div class="cs-label">Campaign</div><div class="cs-value g">May 2026</div></div>
+        <div class="cs"><div class="cs-label">Paytm POS</div><div class="cs-value g">✓ Active</div></div>
+      </div>
+      <div class="card-footer">
+        <a href="${BASE}/${b.file}" target="_blank" class="btn-dl" download="${b.file}">⬇ Download Manual</a>
+        <a href="${BASE}/${b.file}" target="_blank" class="btn-view">↗ View</a>
+      </div>
+    </div>`).join('');
+}
+renderCards(BRANDS);
+
+const inp = document.getElementById('searchInput');
+const clrBtn = document.getElementById('searchClear');
+const skuResults = document.getElementById('skuResults');
+const skuBody = document.getElementById('skuTableBody');
+const noResults = document.getElementById('noResults');
+const resTitle = document.getElementById('resultsTitle');
+const resCnt = document.getElementById('resultsCount');
+
+function hl(t,q){
+  if(!q) return String(t);
+  return String(t).replace(new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi'),'<mark>$1</mark>');
+}
+
+inp.addEventListener('input',()=>{
+  const q=inp.value.trim();
+  clrBtn.style.display=q?'block':'none';
+  if(!q){showAll();return;}
+  doSearch(q);
+});
+
+function showAll(){
+  grid.classList.remove('hidden');
+  skuResults.classList.remove('visible');
+  noResults.style.display='none';
+  resTitle.textContent='May 2026 Offer Manuals';
+  resCnt.textContent='Showing all 37 brand manuals';
+  renderCards(BRANDS);
+}
+
+function clearSearch(){inp.value='';clrBtn.style.display='none';showAll();}
+
+function doSearch(q){
+  const ql=q.toLowerCase().trim();
+  // First try SKU-level search from SKU_DB (loaded from sku_db.js)
+  let skuMatches = [];
+  if(typeof SKU_DB !== 'undefined'){
+    skuMatches = SKU_DB.filter(r=>
+      (r.s && r.s.toLowerCase().includes(ql)) ||
+      (r.d && r.d.toLowerCase().includes(ql)) ||
+      (r.p && r.p.toLowerCase().includes(ql)) ||
+      (r.b && r.b.toLowerCase().includes(ql)) ||
+      (r.c && r.c.toLowerCase().includes(ql))
+    );
+  }
+
+  // Also match brands at card level
+  const brandMatches = BRANDS.filter(b=>
+    b.brand.toLowerCase().includes(ql)||
+    b.cat.toLowerCase().includes(ql)||
+    b.tags.toLowerCase().includes(ql)
+  );
+
+  noResults.style.display='none';
+
+  if(skuMatches.length > 0){
+    // Show SKU table
+    grid.classList.add('hidden');
+    skuResults.classList.add('visible');
+
+    // Deduplicate by sku+brand, limit to 200 for performance
+    const seen=new Set();
+    const unique=skuMatches.filter(r=>{
+      const k=r.b+'|'+r.s+'|'+r.ct;
+      if(seen.has(k)) return false;
+      seen.add(k); return true;
+    }).slice(0,200);
+
+    skuBody.innerHTML = unique.map(r=>`
+      <tr>
+        <td><span class="sku-brand">${hl(r.b,q)}</span></td>
+        <td>
+          <div class="sku-model">${hl(r.p||'—',q)}</div>
+          <div class="sku-code">SKU: ${hl(r.s||'—',q)}${r.d?' &nbsp;|&nbsp; PID: '+hl(r.d,q):''}</div>
+        </td>
+        <td><span class="sku-chip">${hl(r.c||'—',q)}</span></td>
+        <td style="font-size:11.5px;">${r.mn||'—'}${r.mx?' – '+r.mx:''}</td>
+        <td>${r.cb?`<span class="sku-cb">${r.cb}</span>`:'<span style="color:var(--muted);font-size:11px;">As per CBD</span>'}${r.fs?` <span style="font-size:10px;color:#16a34a;">+${r.fs} FS</span>`:''}</td>
+        <td><span class="sku-chip">${r.ct||r.b}</span><br><span style="font-size:10px;color:var(--muted);">${r.t||''}</span></td>
+        <td><a href="${BASE}/${r.f}" target="_blank" class="sku-btn" download="${r.f}">⬇ Download</a></td>
+      </tr>`).join('');
+
+    resTitle.textContent=`Results for "${q}"`;
+    resCnt.textContent=`${unique.length} SKU match${unique.length!==1?'es':''}${skuMatches.length>200?' (showing top 200)':''} across ${[...new Set(unique.map(r=>r.b))].join(', ')}`;
+
+  } else if(brandMatches.length > 0){
+    // Fall back to brand card view
+    grid.classList.remove('hidden');
+    skuResults.classList.remove('visible');
+    renderCards(brandMatches);
+    resTitle.textContent=`Results for "${q}"`;
+    resCnt.textContent=`${brandMatches.length} brand manual${brandMatches.length!==1?'s':''} matched`;
+
+  } else {
+    grid.classList.add('hidden');
+    skuResults.classList.remove('visible');
+    noResults.style.display='block';
+    resTitle.textContent=`No results for "${q}"`;
+    resCnt.textContent='Try a brand name, product name or SKU number';
+  }
+}
+
+function filterCards(f,btn){
+  document.querySelectorAll('.fc').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  clearSearch();
+  const filtered=f==='all'?BRANDS:BRANDS.filter(b=>b.tags.includes(f));
+  renderCards(filtered);
+  resCnt.textContent=`Showing ${filtered.length} brand manuals`;
+}
+</script>
+</body>
+</html>
