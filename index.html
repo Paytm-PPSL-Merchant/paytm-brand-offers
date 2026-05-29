@@ -11,12 +11,12 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--navy:#002970;--sky:#00baf2;--bg:#f0f4f8;--border:#e2e8f0;--muted:#64748b;--charcoal:#2d3748}
 html{-webkit-text-size-adjust:100%}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--charcoal);min-height:100dvh}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--charcoal);min-height:100dvh;overflow-x:hidden;width:100%}
 .nav{background:var(--navy);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.3)}
 .nav-name{font-size:15px;font-weight:800;color:#fff;line-height:1.1}
 .nav-sub{font-size:10px;color:rgba(255,255,255,.5);margin-top:1px}
 .nav-badge{font-size:10px;font-weight:700;color:var(--sky);background:rgba(0,186,242,.12);border:1px solid rgba(0,186,242,.25);border-radius:20px;padding:4px 10px;white-space:nowrap;flex-shrink:0}
-.hero{background:linear-gradient(135deg,#002970 0%,#004bb5 60%,#0070d8 100%);padding:24px 16px 36px;text-align:center;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#002970 0%,#004bb5 60%,#0070d8 100%);padding:24px 16px 14px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(0,186,242,.15) 0%,transparent 60%)}
 .hero-inner{position:relative;z-index:1}
 .hero-pill{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);background:rgba(0,186,242,.1);border:1px solid rgba(0,186,242,.25);border-radius:20px;padding:4px 12px;margin-bottom:10px}
@@ -30,20 +30,32 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .search-bar::placeholder{color:var(--muted)}
 .clr-btn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);font-size:17px;cursor:pointer;display:none;padding:4px 6px;-webkit-tap-highlight-color:transparent}
 /* SKU SEARCH */
-.sku-section{background:#fff;border-top:3px solid var(--sky);padding:16px}
+.sku-section{background:#fff;border-top:none;padding:14px 16px;width:100%;max-width:100%;overflow:hidden;box-sizing:border-box}
 .sku-title{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:10px}
-.sku-row{display:flex;gap:8px;align-items:stretch}
-.sku-brand-sel{height:44px;padding:0 10px;border-radius:8px;border:1.5px solid var(--border);font-size:13px;font-family:inherit;color:var(--charcoal);background:#fff;outline:none;flex-shrink:0;min-width:110px}
-.sku-input{flex:1;height:44px;padding:0 12px;border-radius:8px;border:1.5px solid var(--border);font-size:14px;font-family:inherit;color:var(--charcoal);outline:none;-webkit-appearance:none}
+.sku-row{display:flex;gap:6px;align-items:stretch;flex-wrap:wrap}
+.sku-row .sku-brand-sel{min-width:100px;max-width:120px;flex-shrink:0}
+.sku-row .sku-input-wrap{flex:1;min-width:0}
+.sku-row .sku-btn{flex-shrink:0}
+.sku-brand-sel{height:44px;padding:0 6px;border-radius:8px;border:1.5px solid var(--border);font-size:13px;font-family:inherit;color:var(--charcoal);background:#fff;outline:none;flex-shrink:0;min-width:100px;max-width:120px;box-sizing:border-box}
+.sku-input{width:100%;height:44px;padding:0 30px 0 12px;border-radius:8px;border:1.5px solid var(--border);font-size:14px;font-family:inherit;color:var(--charcoal);outline:none;-webkit-appearance:none;box-sizing:border-box}
 .sku-input:focus,.sku-brand-sel:focus{border-color:var(--sky)}
-.sku-btn{height:44px;padding:0 16px;border-radius:8px;background:var(--navy);color:#fff;font-size:13px;font-weight:700;font-family:inherit;border:none;cursor:pointer;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent}
+.sku-btn{height:44px;padding:0 14px;border-radius:8px;background:var(--navy);color:#fff;font-size:13px;font-weight:700;font-family:inherit;border:none;cursor:pointer;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent}
 .sku-btn:active{background:#003a9e}
+.sku-hint-row{display:flex;align-items:center;gap:6px;margin-top:7px}
+.sku-hint{font-size:11px;color:var(--muted);flex:1}
+.info-btn{background:none;border:none;color:var(--sky);font-size:15px;cursor:pointer;padding:0;line-height:1;flex-shrink:0;-webkit-tap-highlight-color:transparent}
+.info-box{display:none;background:#f0f8ff;border:1px solid #bae0fd;border-radius:8px;padding:12px 14px 12px 14px;margin-top:8px;font-size:12px;color:var(--charcoal);line-height:1.7;position:relative}
+.info-box ul{margin-left:16px;margin-top:4px}
+.info-box li{margin-bottom:2px}
+.info-close{position:absolute;top:8px;right:10px;background:none;border:none;font-size:14px;color:var(--muted);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.sku-input-wrap{position:relative;flex:1}
+.sku-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;display:none;padding:2px 4px;-webkit-tap-highlight-color:transparent}
 .sku-hint{font-size:11px;color:var(--muted);margin-top:7px}
-.sku-results{padding:0 16px 16px;background:#fff}
+.sku-results{padding:0 16px 16px;background:#fff;width:100%;max-width:100%;box-sizing:border-box;overflow:hidden}
 .sku-status{font-size:12px;color:var(--muted);padding:10px 0 6px;font-style:italic}
 .sku-status.found{color:#15803d;font-style:normal;font-weight:600}
 .sku-status.notfound{color:#dc2626;font-style:normal;font-weight:600}
-.result-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.result-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06);width:100%;box-sizing:border-box}
 .result-card-hdr{background:var(--navy);padding:8px 12px;display:flex;align-items:center;gap:8px}
 .result-card-brand{font-size:12px;font-weight:800;color:#fff}
 .result-card-table{font-size:10px;color:rgba(255,255,255,.6)}
@@ -96,6 +108,7 @@ footer strong{color:#fff}
              autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
       <button class="clr-btn" id="clrBtn" onclick="clearBrandSearch()">✕</button>
     </div>
+    <div style="margin-top:18px;font-size:17px;font-weight:800;color:#fff;letter-spacing:2px;">OR</div>
   </div>
 </div>
 
@@ -125,12 +138,31 @@ footer strong{color:#fff}
       <option value="vivo">Vivo</option>
       <option value="xiaomi">Xiaomi</option>
     </select>
-    <input class="sku-input" id="skuQ" type="search"
-           placeholder="Enter SKU or Model ID…"
-           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    <div class="sku-input-wrap">
+      <input class="sku-input" id="skuQ" type="search"
+             placeholder="Enter SKU or Model ID…"
+             autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+             oninput="document.getElementById('skuClear').style.display=this.value?'block':'none'"
+             style="width:100%;padding-right:30px">
+      <button class="sku-clear" id="skuClear" onclick="clearSkuInput()">✕</button>
+    </div>
     <button class="sku-btn" onclick="skuSearch()">Search</button>
   </div>
-  <div class="sku-hint">Select a brand, enter SKU/Model ID, tap Search. Data loads only when searched.</div>
+  <div class="sku-hint-row">
+    <span class="sku-hint">Select a brand &amp; enter SKU / Model ID, then tap Search.</span>
+    <button class="info-btn" onclick="toggleInfo()" aria-label="How to search">ⓘ</button>
+  </div>
+  <div class="info-box" id="infoBox">
+    <button class="info-close" onclick="toggleInfo()">✕</button>
+    <p><b>How to search:</b></p>
+    <ul>
+      <li>Select a <b>brand</b> from the dropdown</li>
+      <li>Type a <b>SKU / Model ID / Product Name</b> in the text box</li>
+      <li>Tap <b>Search</b> — results appear below</li>
+      <li>To search again, tap <b>✕</b> in the search box to clear, then type a new SKU</li>
+      <li>To find a brand PDF, use the <b>brand search bar</b> above</li>
+    </ul>
+  </div>
 </div>
 <div class="sku-results" id="skuResults"></div>
 
@@ -154,7 +186,7 @@ const BASE = 'https://paytm-ppsl-merchant.github.io/paytm-brand-offers';
 
 const BRANDS = [
   {name:'OnePlus',        file:'OnePlus_May2026_NoCostEMIOffers.pdf',       color:'#e53e3e', logo:'logos/oneplus.png'},
-  {name:'Apple',          file:'Apple_May2026_NoCostEMIOffers.pdf',          color:'#444444', logo:'logos/apple.png'},
+  {name:'Apple',          file:'Apple_May2026_NoCostEMIOffers.pdf',          color:'#444444', logo:null},
   {name:'Samsung Mobile', file:'Samsung_Mobile_May2026_NoCostEMIOffers.pdf', color:'#1428A0', logo:'logos/samsung.png'},
   {name:'Samsung CE',     file:'Samsung_CE_May2026_NoCostEMIOffers.pdf',     color:'#1428A0', logo:'logos/samsung.png'},
   {name:'Xiaomi',         file:'Xiaomi_May2026_NoCostEMIOffers.pdf',         color:'#ff6900', logo:'logos/xiaomi.png'},
@@ -285,6 +317,19 @@ function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 document.getElementById('skuQ').addEventListener('keydown', e => { if(e.key==='Enter') skuSearch(); });
+
+function toggleInfo() {
+  const box = document.getElementById('infoBox');
+  box.style.display = box.style.display === 'block' ? 'none' : 'block';
+}
+
+function clearSkuInput() {
+  const inp = document.getElementById('skuQ');
+  inp.value = '';
+  document.getElementById('skuClear').style.display = 'none';
+  document.getElementById('skuResults').innerHTML = '';
+  inp.focus();
+}
 </script>
 </body>
 </html>
